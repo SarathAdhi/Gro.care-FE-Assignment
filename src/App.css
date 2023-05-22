@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #111;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@layer base {
+  h1 {
+    @apply text-3xl md:text-4xl font-medium;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl font-medium;
+  }
+  h3 {
+    @apply text-xl md:text-2xl font-medium;
+  }
+  h4 {
+    @apply text-lg md:text-xl font-medium;
+  }
+  p {
+    @apply text-base;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+}
+
+progress[value]::-webkit-progress-bar {
+  border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 20px;
+  background-color: red;
 }

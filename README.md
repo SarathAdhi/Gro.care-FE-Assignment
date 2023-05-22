@@ -1,6 +1,19 @@
 # Problem Statement
 
-You have to create a React application that will allow users to paste a UI schema on the left side and preview the rendered form on the right-hand side. The application will have a single screen which will be divided into two equal sections next to each other. On the left section will be a JSON editor to paste the UI-Schema. On the right section, a form will be automatically rendered based on the pasted UI-Schema.
+You are to build a simplified "YouTube Clone" web application. This application should allow users to:
+
+View a list of predefined video thumbnails.
+Click on a thumbnail to play the video.
+See basic information about the video such as the title and description.
+
+Note: You will be calling the videos API in a paginated manner.
+(Read this to know more about API pagination - https://nordicapis.com/everything-you-need-to-know-about-api-pagination/)
+
+For fetching videos use the below-mentioned API
+
+curl --location --request GET 'https://internship-service.onrender.com/videos?page=2'
+
+`page` starts with 0 and you should call the API with incremented values for Pagination.
 
 # Tech Stack
 
